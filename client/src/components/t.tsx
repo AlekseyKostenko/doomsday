@@ -2,15 +2,25 @@ import React from "react";
 import { Text } from '@primer/react';
 
 import { TextTags } from '../types';
+import styled from 'styled-components';
 
 type Props = {
     children: string
-    fontWeight: string;
-    as: TextTags;
+    fontWeight?: string;
+    as?: TextTags;
+    className?: string;
+    fontSize?: number;
+    letterSpacing?: string;
 }
 
-export const T = ({ children, fontWeight = 'normal', as = TextTags.p }: Props) => (
-    <Text as={as} fontWeight={fontWeight}>
+const StyledText = styled(Text) <{ letterSpacing: string }>`
+    font-family: 'Days-One';
+    margin: 0;
+    letter-spacing: ${props => props.letterSpacing};
+`;
+
+export const T = ({ children, fontWeight = 'normal', as = TextTags.p, className, fontSize = 16, letterSpacing = 'normal' }: Props) => (
+    <StyledText as={as} fontWeight={fontWeight} className={className} fontSize={fontSize} letterSpacing={letterSpacing}>
         {children}
-    </Text>
+    </StyledText>
 );
