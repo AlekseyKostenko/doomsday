@@ -28,7 +28,7 @@ export default function Home() {
   };
 
   return (
-    <Layout>
+    <Layout title='Часы судного дня онлайн' metaDescription='Осталось 100 секунд до полуночи'>
       <StyledWrapper display="flex" maxWidth={1040} margin="auto" alignItems='center' mt='20px'>
         <StyledImage src={ClockImage} />
         <Box ml='60px'>
