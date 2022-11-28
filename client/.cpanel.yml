@@ -1,4 +1,0 @@
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/s47467/public_html/chasy-sudnogo-dnya.rf
-    - /bin/cp -R client/public/* $DEPLOYPATH
