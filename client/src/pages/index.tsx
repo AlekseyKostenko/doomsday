@@ -22,10 +22,11 @@ const StyledImage = styled.img`
   margin-left: -95px;
 `;
 
+const DonateHref = styled.a`
+  text-decoration: none;
+`
+
 export default function Home() {
-  const donateAction = () => {
-    alert('Функция доната скоро появится...')
-  };
 
   return (
     <Layout title='Часы судного дня онлайн' metaDescription='Осталось 100 секунд до полуночи'>
@@ -42,9 +43,11 @@ export default function Home() {
         </Box>
       </StyledWrapper>
       <Box pt={65}>
-        <Button onClick={donateAction}>
-          Донат
-        </Button>
+        <DonateHref href='https://pay.cloudtips.ru/p/a2e302da' target='_blank'>
+          <Button>
+            Донат
+          </Button>
+        </DonateHref>
       </Box>
     </Layout>
   )
