@@ -18,12 +18,15 @@
     "@primer/react": "^35.14.0",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
+    "@types/react-burger-menu": "^2.8.3",
     "@types/react-dom": "^18.0.8",
     "gatsby": "^4.24.7",
     "gatsby-source-filesystem": "^5.0.0",
     "react": "^18.1.0",
+    "react-burger-menu": "^3.0.8",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
+    "react-responsive": "^9.0.2",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
