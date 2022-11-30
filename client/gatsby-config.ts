@@ -7,7 +7,14 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    // ...
+    {
+      resolve: 'gatsby-plugin-htaccess',
+      options: {
+        RewriteBase: true,
+        https: true,
+        www: true,                
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
