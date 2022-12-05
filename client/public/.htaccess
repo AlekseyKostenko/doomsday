@@ -266,7 +266,13 @@ AddDefaultCharset utf-8
 # Define the domain, every other domain, that leads to your website, 
 # gets redirected to.
 
-### NORMALIZE-HOST ###
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} !=часы-судного-дня.рф
+  RewriteRule (.*) %{ENV:PROTO}://часы-судного-дня.рф/$1 [R=301,L]
+</IfModule>
+
 
 
 # ----------------------------------------------------------------------
@@ -336,7 +342,11 @@ AddDefaultCharset utf-8
 
     RewriteEngine On
 
-    ### CUSTOM-REWRITES ###
+    RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]
+
+    RewriteCond %{HTTP_HOST} ^(www\.)?http://xn-----6kcnec4ddfb1ab0a5c8c1d\.xn--p1ai [NC]
+    RewriteRule ^(.*)$ %{ENV:PROTO}://https://xn-----6kcnec4ddfb1ab0a5c8c1d\.xn--p1ai/$1 [L,R=301,NC]
+        
 
 </IfModule>
 
