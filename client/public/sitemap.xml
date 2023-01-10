@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+   <url>
+      <loc>https://xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai/</loc>
+      <lastmod>2023-01-10</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai/history/</loc>
+      <lastmod>2023-01-10</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
+   <url>
+      <loc>https://xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai/more/</loc>
+      <lastmod>2023-01-10</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
+   <url>
+      <loc>https://xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai/post/</loc>
+      <lastmod>2023-01-10</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
+</urlset>
