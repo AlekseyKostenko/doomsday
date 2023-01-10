@@ -8,8 +8,8 @@ module.exports = {
   /* Your site config here */
 
   siteMetadata: {
-    title: `Часы судного дня онлайн`,
-    description: `Осталось 100 секунд до полуночи`,
+    title: `Часы судного дня онлайн – сколько осталось до полуночи ?`,
+    description: `Часы судного дня онлайн: что это такое, как появились, что символизируют? И главный вопрос: какое время показывают сегодня?`,
     author: `me`,
     siteUrl: `https://xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai`
   },
@@ -21,7 +21,7 @@ module.exports = {
         RewriteBase: true,
         https: true,
         www: true,
-        host: 'часы-судного-дня.рф',
+        host: 'xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai',
         redirect: [
           'RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]',
           {

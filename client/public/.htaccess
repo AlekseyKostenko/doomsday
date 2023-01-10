@@ -269,8 +269,8 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteCond %{HTTP_HOST} !=часы-судного-дня.рф
-  RewriteRule (.*) %{ENV:PROTO}://часы-судного-дня.рф/$1 [R=301,L]
+  RewriteCond %{HTTP_HOST} !=xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai
+  RewriteRule (.*) %{ENV:PROTO}://xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai/$1 [R=301,L]
 </IfModule>
 
 
