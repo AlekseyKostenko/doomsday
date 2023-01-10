@@ -20,7 +20,7 @@ module.exports = {
       options: {
         RewriteBase: true,
         https: true,
-        www: true,
+        www: false,
         host: 'xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai',
         redirect: [
           'RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]',
