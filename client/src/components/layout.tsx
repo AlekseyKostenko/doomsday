@@ -15,6 +15,7 @@ type Props = {
     children: React.ReactNode;
     title: string;
     metaDescription: string;
+    canonical: string;
 }
 
 const MainWrapper = styled(Box) <{ filter: string }>`
@@ -90,7 +91,7 @@ const BurgerButton = styled(Box)`
     }
 `;
 
-export const Layout = ({ title, metaDescription, children }: Props) => {
+export const Layout = ({ title, metaDescription, canonical, children }: Props) => {
 
     const isTabletOrMobile = useMediaQuery({ query: `(${isTabletWidth})` });
 
@@ -99,6 +100,7 @@ export const Layout = ({ title, metaDescription, children }: Props) => {
             <Helmet>
                 <title>{title}</title>
                 {metaDescription && <meta name="description" content={metaDescription} />}
+                <link rel="canonical" href={canonical}/>
 
                 {/* <!-- Google Tag Manager --> */}
                 <script>

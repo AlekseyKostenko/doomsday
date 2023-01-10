@@ -77,7 +77,7 @@ const DonateHref = styled.a`
 export default function Home() {
 
   return (
-    <Layout title='Часы судного дня онлайн' metaDescription='Осталось 100 секунд до полуночи'>
+    <Layout title='Часы судного дня онлайн' metaDescription='Осталось 100 секунд до полуночи' canonical='https://xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai/'>
       <StyledWrapper display="flex" maxWidth={1040} margin="auto" alignItems='center' mt='20px'>
         <Box className='imageWrapper'>
           <img src={ClockImage} />
