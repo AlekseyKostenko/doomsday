@@ -37,6 +37,7 @@ module.exports = {
         name: "fonts",
         path: `${__dirname}/static/fonts/`
       }
-    }
+    },
+    `gatsby-plugin-react-helmet`
   ]
 }

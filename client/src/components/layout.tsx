@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from '@primer/react';
 import { slide as Menu } from 'react-burger-menu'
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet'
 
 import styled from 'styled-components';
 import Rectangle from '../images/Rectangle.svg';
