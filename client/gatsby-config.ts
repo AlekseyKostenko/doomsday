@@ -15,6 +15,24 @@ module.exports = {
   },
 
   plugins: [
+
+    {
+      /**
+       * First up is the WordPress source plugin that connects Gatsby
+       * to your WordPress site.
+       *
+       * visit the plugin docs to learn more
+       * https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/README.md
+       *
+       */
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // the only required plugin option for WordPress is the GraphQL url.
+        url:
+          process.env.WPGRAPHQL_URL ||
+          `https://xn-----6kcnec4ddfb1ab0a5c8c1d.xn--p1ai/admin/graphql`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-htaccess',
       options: {
@@ -38,6 +56,9 @@ module.exports = {
         path: `${__dirname}/static/fonts/`
       }
     },
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
   ]
 }

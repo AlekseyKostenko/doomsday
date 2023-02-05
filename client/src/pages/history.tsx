@@ -1,26 +1,37 @@
 import React from "react"
 import { Layout } from '../components';
 import { Box } from '@primer/react';
-import { T, Button } from '../components';
-import styled from 'styled-components';
+import { graphql } from "gatsby";
+import Seo from "../components/seo"
+import HistoryItem from '../components/history_item'
 
-const History = () => {
+
+const History = ({ data }) => {
+  
+  console.log(data);
+  
     return (
         <Layout>
+            <Seo title='123' description='123' />
             <Box p={20}>
-                <Box display='flex' justifyContent='center' mb={50}>
-                    <T fontSize={30}>
-                        Страница 'История' находится в разработке
-                    </T>
-                </Box>
-                <Box>
-                    <Button to='/'>
-                        На главную
-                    </Button>
-                </Box>
+                <HistoryItem/>
+
             </Box>
         </Layout>
     )
 };
 
 export default History;
+
+export const pageQuery = graphql`
+  query {
+    allWpPost {
+      nodes {
+        title
+        excerpt
+        slug
+      }
+    }
+  }
+`
+
