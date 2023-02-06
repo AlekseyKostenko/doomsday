@@ -6,15 +6,16 @@ import Seo from "../components/seo"
 import HistoryItem from '../components/history_item'
 
 
-const History = ({ data }) => {
+const History = ({ data }) => { 
   
-  console.log(data);
   
     return (
         <Layout>
             <Seo title='123' description='123' />
             <Box p={20}>
-                <HistoryItem/>
+                <HistoryItem
+                  data={data}  
+                />
 
             </Box>
         </Layout>
@@ -24,14 +25,16 @@ const History = ({ data }) => {
 export default History;
 
 export const pageQuery = graphql`
-  query {
-    allWpPost {
-      nodes {
+query {
+  allWpPost(sort: { fields: [date] }) {
+    edges {
+      node {
         title
         excerpt
         slug
       }
     }
   }
+}
 `
 

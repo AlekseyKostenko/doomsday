@@ -4,39 +4,29 @@ import StyledHistoryItem from './styled_history_item.js'
 import {graphql } from "gatsby"
 import {usePostQuery} from '../../hooks/usePostQuery.js'
 
-const HistoryItem = () => {  
-    console.log(usePostQuery);
+const HistoryItem = (data) => {  
     
+    console.log(data.data.allWpPost.edges);
+    
+  
     
     return (
         <StyledHistoryItem>
-            <ul className="timeline">                    
+            <ul className="timeline">  
+                           
+                {data.data.allWpPost.edges.map((post, i) =>                
+                
                     <li>
-                        <div className="direction-r">
+                        
+                        <div className={i% 2 === 0 ? "direction-l" : "direction-r" }>
                             <div className="flag-wrapper">
-                                <span className="flag">2023</span>                                
+                                <span className="flag">{post.node.title}</span>                                
                             </div>
-                            <div className="desc">My current employment. Way better than the position before!</div>
+                            <div className="desc">{post.node.excerpt}</div>
                         </div>
                     </li>
-                    
-                    <li>
-                        <div className="direction-l">
-                            <div className="flag-wrapper">
-                                <span className="flag">2022</span>                                
-                            </div>
-                            <div className="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <div className="direction-r">
-                            <div className="flag-wrapper">
-                                <span className="flag">2021</span>                                
-                            </div>
-                            <div className="desc">A description of all the lectures and courses I have taken and my final degree?</div>
-                        </div>
-                    </li>
+                )}
+
 
                 </ul>
                
@@ -46,16 +36,3 @@ const HistoryItem = () => {
 
 export default HistoryItem
 
-export const pageQuery = graphql`
-query MyQuery {
-    allWpPost {
-      edges {
-        node {
-          title
-          uri
-          excerpt
-        }
-      }
-    }
-  }
-`
