@@ -14,8 +14,7 @@ const HistoryItem = (data) => {
                            
                 {data.data.allWpPost.edges.map((post, i) =>                
                 
-                    <li>
-                        
+                    <li>                        
                         <div className={i% 2 === 0 ? "direction-l" : "direction-r" }>
                             <div className="flag-wrapper">
                             <a className="flag" href={`/${post.node.slug}`}>{post.node.title}</a>                                                                                          
