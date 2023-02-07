@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "gatsby"
 import StyledHistoryItem from './styled_history_item.js'
-import {graphql } from "gatsby"
-import {usePostQuery} from '../../hooks/usePostQuery.js'
 
-const HistoryItem = (data) => {  
+
+const HistoryItem = (data) => {   
     
-    console.log(data.data.allWpPost.edges);
+    console.log(data);
     
-  
     
     return (
         <StyledHistoryItem>
@@ -20,7 +18,7 @@ const HistoryItem = (data) => {
                         
                         <div className={i% 2 === 0 ? "direction-l" : "direction-r" }>
                             <div className="flag-wrapper">
-                                <span className="flag">{post.node.title}</span>                                
+                            <a className="flag" href={`/${post.node.slug}`}>{post.node.title}</a>                                                                                          
                             </div>
                             <div className="desc">{post.node.excerpt}</div>
                         </div>

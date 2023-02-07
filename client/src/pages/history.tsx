@@ -1,13 +1,14 @@
 import React from "react"
 import { Layout } from '../components';
 import { Box } from '@primer/react';
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Seo from "../components/seo"
 import HistoryItem from '../components/history_item'
 
 
 const History = ({ data }) => { 
   
+  console.log(data.allWpPost.edges[0].node.slug);
   
     return (
         <Layout>
@@ -15,7 +16,7 @@ const History = ({ data }) => {
             <Box p={20}>
                 <HistoryItem
                   data={data}  
-                />
+                />                 
 
             </Box>
         </Layout>

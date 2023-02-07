@@ -2,16 +2,15 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import parse from "html-react-parser"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import {Bio} from "../components"
+import {Layout} from "../components"
+import {Seo} from "../components"
 
 const BlogIndex = ({
   data,
   pageContext: { nextPagePath, previousPagePath },
 }) => {
   const posts = data.allWpPost.nodes
-  console.log(data.allWpPost.nodes);
 
   if (!posts.length) {
     return (
