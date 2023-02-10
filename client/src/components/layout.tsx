@@ -131,13 +131,13 @@ export const Layout = ({ title, metaDescription, canonical, children }: Props) =
                                 <Link fontSize='18px' color='#ffffff' disableHover to='/'>Главная</Link>
                             </Box>
                             <Box mb={10}>
-                                <Link fontSize='18px' color='#ffffff' disableHover to='/more'>Узнать больше</Link>
+                                <Link fontSize='18px' color='#ffffff' disableHover to='/узнать-больше'>Узнать больше</Link>
                             </Box>
                             <Box mb={10}>
-                                <Link fontSize='18px' color='#ffffff' disableHover to='/history'>История</Link>
+                                <Link fontSize='18px' color='#ffffff' disableHover to='/история'>История</Link>
                             </Box>
                             <Box mb={10}>
-                                <Link fontSize='18px' color='#ffffff' disableHover to='/post'>Посты</Link>
+                                <Link fontSize='18px' color='#ffffff' disableHover to='/посты'>Посты</Link>
                             </Box>
                         </Menu>
                     </BurgerButton> :
@@ -146,13 +146,13 @@ export const Layout = ({ title, metaDescription, canonical, children }: Props) =
                             <Link to='/'>Главная</Link>
                         </Box>
                         <Box ml={32}>
-                            <Link to='/more'>Узнать больше</Link>
+                            <Link to='/узнать-больше'>Узнать больше</Link>
                         </Box>
                         <Box ml={32}>
-                            <Link to='/history'>История</Link>
+                            <Link to='/история'>История</Link>
                         </Box>
                         <Box ml={32}>
-                            <Link to='/post'>Посты</Link>
+                            <Link to='/посты'>Посты</Link>
                         </Box>
                     </Box>
                 }
