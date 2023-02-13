@@ -19,7 +19,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     data: post.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
     alt: post.featuredImage?.node?.alt || ``,
   }
-
+  
   return (
     <Layout>
       <Seo title={post.title} description={post.excerpt} />

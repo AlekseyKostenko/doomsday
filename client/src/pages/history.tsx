@@ -8,7 +8,7 @@ import HistoryItem from '../components/history_item'
 
 const History = ({ data }) => { 
   
-  console.log(data.allWpPost.edges[0].node.slug);
+  
   
     return (
         <Layout>
@@ -28,11 +28,18 @@ export default History;
 export const pageQuery = graphql`
 query {
   allWpPost(sort: { fields: [date] }) {
-    edges {
-      node {
-        title
-        excerpt
-        slug
+    nodes {
+      title
+      uri
+      expert {
+        historyExpert
+      }
+      history {
+        year
+      }
+      slug
+      postUrl {
+        postUrl
       }
     }
   }
