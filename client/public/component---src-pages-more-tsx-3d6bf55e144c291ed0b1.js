@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[633],{8745:function(e,t,l){l.r(t);var r=l(7294),n=l(3705),a=l(1296);t.default=()=>r.createElement(n.Ar,null,r.createElement(a.Z,{p:20},r.createElement(a.Z,{display:"flex",justifyContent:"center",mb:50},r.createElement(n.T,{fontSize:30},"Страница 'Узнать больше' находится в разработке")),r.createElement(a.Z,null,r.createElement(n.zx,{to:"/"},"На главную"))))}}]);
+//# sourceMappingURL=component---src-pages-more-tsx-3d6bf55e144c291ed0b1.js.map
