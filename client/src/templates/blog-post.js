@@ -19,10 +19,11 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     data: post.featuredImage?.node?.localFile?.childImageSharp?.gatsbyImageData,
     alt: post.featuredImage?.node?.alt || ``,
   }
+  console.log(post);
   
   return (
     <Layout>
-      <Seo title={post.title} description={post.excerpt} />
+      <Seo title={post.seo.title} description={post.seo.metaDesc} />
 
       <article
         className="blog-post"
@@ -50,9 +51,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
 
         <hr />
 
-        <footer>
-          <Bio />
-        </footer>
+        
       </article>
 
       <nav className="blog-post-nav">
@@ -113,6 +112,10 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+      seo {
+        title
+        metaDesc
       }
     }
     previous: wpPost(id: { eq: $previousPostId }) {

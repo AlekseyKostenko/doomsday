@@ -146,7 +146,7 @@ async function getPosts({ graphql, reporter }) {
             uri
             postUrl {
               postUrl
-            }
+            }            
           }
 
           next {

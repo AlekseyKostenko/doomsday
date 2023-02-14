@@ -22,17 +22,19 @@ const Seo = ({ description, lang, meta, title }) => {
       }
     `
   )
+  
+  
 
   const metaDescription = description || wp.generalSettings?.description
   const defaultTitle = wp.generalSettings?.title
-
+  console.log(defaultTitle);
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={defaultTitle ? `%s` : null}
       meta={[
         {
           name: `description`,

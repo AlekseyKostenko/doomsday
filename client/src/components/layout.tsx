@@ -19,7 +19,7 @@ type Props = {
 }
 
 const MainWrapper = styled(Box) <{ filter: string }>`
-    background-image: ${props => `url(${props.filter})`};
+    
     min-height: calc(100vh - 30px);
     padding-bottom: 30px;
 
@@ -30,7 +30,7 @@ const MainWrapper = styled(Box) <{ filter: string }>`
 `;
 
 const StyledBox = styled(Box)`
-    background: linear-gradient(180deg, #DED1C1 0%, #F7F0E8 100%);
+    background: #fff;
 `;
 
 const BurgerButton = styled(Box)`
