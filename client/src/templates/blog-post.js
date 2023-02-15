@@ -2,12 +2,9 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
+import { Box } from '@primer/react';
+import StyledBlogPost from './styled-blog-post'
 
-// We're using Gutenberg so we need the block styles
-// these are copied into this project due to a conflict in the postCSS
-// version used by the Gatsby and @wordpress packages that causes build
-// failures.
-// @todo update this once @wordpress upgrades their postcss version
 
 
 import Bio from "../components/bio"
@@ -24,35 +21,39 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
   return (
     <Layout>
       <Seo title={post.seo.title} description={post.seo.metaDesc} />
+      <StyledBlogPost>
+        <Box className="wrapper">
+          <Box className="header_content">
+            <Box className="title_content">
+              <h1 itemProp="headline">{parse(post.title)}</h1>
+            </Box>
+            <Box className="title_image">
+              {featuredImage?.data && (
+                <GatsbyImage
+                  image={featuredImage.data}
+                  alt={featuredImage.alt}
+                  style={{ marginBottom: 50 }}
+                />
+              )}
+            </Box>
+          </Box>
+          <Box className="post_content">
+            <article
+              className="blog-post"
+              itemScope
+              itemType="http://schema.org/Article"
+            >
+              {!!post.content && (
+                <section itemProp="articleBody">{parse(post.content)}</section>
+              )}      
 
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{parse(post.title)}</h1>
+          
+            </article>
+          </Box>
 
-          <p>{post.date}</p>
+        </Box>
 
-          {/* if we have a featured image for this post let's display it */}
-          {featuredImage?.data && (
-            <GatsbyImage
-              image={featuredImage.data}
-              alt={featuredImage.alt}
-              style={{ marginBottom: 50 }}
-            />
-          )}
-        </header>
-
-        {!!post.content && (
-          <section itemProp="articleBody">{parse(post.content)}</section>
-        )}
-
-        <hr />
-
-        
-      </article>
+      
 
       <nav className="blog-post-nav">
         <ul
@@ -81,6 +82,8 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
           </li>
         </ul>
       </nav>
+      </StyledBlogPost>
+      
     </Layout>
   )
 }
